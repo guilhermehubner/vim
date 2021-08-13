@@ -157,6 +157,7 @@ call s:h('DraculaCyanItalic', s:cyan, s:none, [s:attrs.italic])
 call s:h('DraculaGreen', s:green)
 call s:h('DraculaGreenBold', s:green, s:none, [s:attrs.bold])
 call s:h('DraculaGreenItalic', s:green, s:none, [s:attrs.italic])
+call s:h('DraculaGreenUnderline', s:green, s:none, [s:attrs.underline])
 call s:h('DraculaGreenItalicUnderline', s:green, s:none, [s:attrs.italic, s:attrs.underline])
 
 call s:h('DraculaOrange', s:orange)
@@ -264,6 +265,12 @@ if has('nvim')
   hi! link LspDiagnosticsUnderlineHint DraculaInfoLine
   hi! link LspDiagnosticsUnderlineInformation DraculaInfoLine
   hi! link LspDiagnosticsUnderlineWarning DraculaWarnLine
+
+  " nvim-lspconfig
+  hi! link LspCodeLens DraculaGreenUnderline
+  hi! link LspDiagnosticsDefaultInformation DraculaInfoLine
+  hi! link LspDiagnosticsDefaultWarning DraculaWarnLine
+  hi! link LspDiagnosticsDefaultError DraculaErrorLine
 else
   hi! link SpecialKey DraculaSubtle
 endif
